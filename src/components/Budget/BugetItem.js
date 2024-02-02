@@ -1,11 +1,12 @@
 import React from 'react';
 
-const BudgetItem = (props) => {
- return (
+const BudgetItem = ({ budget }) => {
+  return (
     <div>
-      <p>{props.budget.category}</p>
-      <p>{props.budget.budget}</p>
+      <p>{budget.category}</p>
+      <p>{budget.budget}</p>
     </div>
- );
+  );
 };
+// eslint-disable-next-line import/no-anonymous-default-export
 export default BudgetItem;

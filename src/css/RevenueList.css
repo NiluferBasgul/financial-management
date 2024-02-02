@@ -1,6 +1,7 @@
+/* Add any specific styling for the revenue list component here */
 .revenue-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-   }
+}

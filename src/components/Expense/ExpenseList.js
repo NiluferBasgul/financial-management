@@ -1,3 +1,4 @@
+import React from 'react';
 import ExpenseItem from './ExpenseItem';
 
 class ExpenseList extends React.Component {
@@ -16,5 +17,5 @@ class ExpenseList extends React.Component {
     );
  }
 }
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default ExpenseList;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './RevenueItem.css';
+import '../../css/RevenueItem.css';
 
 const RevenueItem = (props) => {
  return (

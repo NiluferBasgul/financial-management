@@ -1,4 +1,5 @@
 import IncomeItem from './IncomeItem';
+import React from 'react';
 
 class IncomeList extends React.Component {
  render() {
@@ -16,5 +17,5 @@ class IncomeList extends React.Component {
     );
  }
 }
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default IncomeList;

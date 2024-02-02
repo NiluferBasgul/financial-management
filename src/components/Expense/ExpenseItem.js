@@ -1,3 +1,5 @@
+import React from 'react';
+
 class ExpenseItem extends React.Component {
     render() {
        return (
@@ -9,5 +11,5 @@ class ExpenseItem extends React.Component {
        );
     }
    }
-   
+   // eslint-disable-next-line import/no-anonymous-default-export
    export default ExpenseItem;

@@ -4,13 +4,23 @@
     align-items: center;
     background-color: #333;
     padding: 10px;
-   }
-   
-   .navbar a {
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-   }
-   
-   .navbar a:hover {
+}
+
+.navbar a:hover {
     color: #ccc;
-    }
+}
+
+.navbar-link {
+    /* Add any additional styling for navbar links here */
+}
+
+/* Additional style for the contact link */
+.navbar a[href^="mailto"] {
+    /* Add specific styles for the email link if needed */
+    color: #FFD700; /* Example: Change the color to gold */
+}

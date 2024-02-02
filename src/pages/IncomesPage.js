@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
+import IncomeList from '../components/Income/IncomeList';
 
 function IncomesPage() {
- const [data, setData] = useState({});
+  const [incomes, setIncomes] = useState([]);
 
- useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
-      const response = await api.get('/incomes');
-      setData(response.data);
+      try {
+        const response = await api.get('/incomes');
+        setIncomes(response.data);
+      } catch (error) {
+        console.error('Error fetching incomes:', error);
+      }
     }
 
     fetchData();
- }, []);
+  }, []);
 
- return (
+  return (
     <div>
       <h2>Incomes</h2>
-      {/* Render the data fetched from the backend */}
+      <IncomeList items={incomes} />
     </div>
- );
+  );
 }
 
 export default IncomesPage;

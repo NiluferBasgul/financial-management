@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
+import ExpenseList from '../components/Expense/ExpenseList';
 
 function ExpensesPage() {
- const [data, setData] = useState({});
+  const [expenses, setExpenses] = useState([]);
 
- useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
-      const response = await api.get('/expenses');
-      setData(response.data);
+      try {
+        const response = await api.get('/expenses');
+        setExpenses(response.data);
+      } catch (error) {
+        console.error('Error fetching expenses:', error);
+      }
     }
 
     fetchData();
- }, []);
+  }, []);
 
- return (
+  return (
     <div>
       <h2>Expenses</h2>
-      {/* Render the data fetched from the backend */}
+      <ExpenseList items={expenses} />
     </div>
- );
+  );
 }
 
 export default ExpensesPage;

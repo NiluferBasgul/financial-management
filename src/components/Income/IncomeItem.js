@@ -1,3 +1,5 @@
+import React from 'react';
+
 class IncomeItem extends React.Component {
     render() {
        return (
@@ -9,5 +11,5 @@ class IncomeItem extends React.Component {
        );
     }
    }
-   
+   // eslint-disable-next-line import/no-anonymous-default-export
    export default IncomeItem;
